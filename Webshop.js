@@ -59,6 +59,14 @@ export default class Webshop{
     }
 
 
+    kosarEvent(){
+        window.addEventListener("kosar", (event)=>{
+            console.log(event.detail);
+            this.#kosarLista.push(event.detail)
+            this.megjelenitListaElemek();
+        })
+    }
+
 
 
 

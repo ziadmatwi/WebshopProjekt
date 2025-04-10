@@ -22,5 +22,14 @@ export default class Termek{
                     </div>`
     }
 
+    kosarbarak(){
+        this.gombElem.addEventListener("click", ()=>{
+            console.log(this.gombElem.value);
+            const e = new CustomEvent("kosar", {detail: this.#termekObj})
+            window.dispatchEvent(e);
+        })
+
+    }
+
 
 }
