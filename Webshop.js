@@ -13,6 +13,9 @@ export default class Webshop{
         this.#kosarLista = [];
         this.#termekGomb = document.querySelector("#termek");
         this.#kosarGomb = document.querySelector("#kosar");
+        this.gombokMegjelenit();
+        this.termekMegjelenit();
+        this.gombEsemenyek();
     }
 
     gombokMegjelenit(){
@@ -24,17 +27,35 @@ export default class Webshop{
 
     gombEsemenyek(){
         document.querySelector("#termekGomb").addEventListener("click", ()=>{
+            this.termekMegjelenit();
+
+        })
+
+        document.querySelector("#kosarGomb").addEventListener("click", ()=>{
             
+            this.kosarMegjelenit();
+
         })
     }
 
 
     termekMegjelenit(){
+        this.szElem.innerHTML = "";
+        for (let index = 0; index < this.#lista.length; index++) {
+            new Termek(this.#lista[i]);
+            
+        }
+
+
 
     }
 
     kosarMegjelenit(){
-
+        this.szElem.innerHTML = "";
+        for (let index = 0; index < this.#lista.length; index++) {
+            new KosarTermek(this.#kosarLista[i]);
+            
+        }
     }
 
 
