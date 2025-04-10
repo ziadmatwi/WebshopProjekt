@@ -8,7 +8,7 @@ export default class KosarTermek{
         console.log(szElem);
         this.megjelenit();
         console.log(this.gombElem);
-        this.kosarbarak();
+        
         this.#index = index;
 
 
@@ -22,6 +22,7 @@ export default class KosarTermek{
                         <p class="card-text">Ár: ${this.#termekObj.ar}</p>
                         <p class="card-text">Platform: ${this.#termekObj.platform}</p>
                         <button class="btn btn-primary kosarGomb">Add to Cart</button>
+                        <p> Ez már a kosárban vaan<p>
                     </div>
                     </div>`
         this.szElem.insertAdjacentHTML("beforeend",html);

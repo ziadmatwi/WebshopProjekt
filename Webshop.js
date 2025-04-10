@@ -59,7 +59,7 @@ export default class Webshop{
     kosarMegjelenit(){
         this.szElem.innerHTML = "";
         for (let index = 0; index < this.#kosarLista.length; index++) {
-            new KosarTermek(this.#kosarLista[i], index);
+            new KosarTermek(this.#kosarLista[index], document.querySelector("#termek"),index);
             
         }
     }
