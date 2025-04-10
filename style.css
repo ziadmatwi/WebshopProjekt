@@ -16,4 +16,16 @@ header div{
   a {
     color: #007bff;
     text-decoration: none;
+}
+
+.card {
+    width: fit-content; /* csak akkora, amekkora a tartalom */
+    max-width: 220px;    /* optional: ne legyen túl nagy */
+    margin: 10px;        /* hogy legyen hely közöttük */
+  }
+  
+  .card-img-top {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
   }
