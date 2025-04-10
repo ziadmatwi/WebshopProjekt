@@ -1,43 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SzipiSzupiGameshop</title>
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js"></script>
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    
+    <header class="bg-dark text-white py-3">
+      <div class="container">
+        <h1 class="mb-0">OLCSÓ GAMING WEBSHOP F*** YEAH!!!!!!!!!!!</h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">SzipiSzupiGameshop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Navigáció váltása"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#termek">Termékek</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kosar">Kosár</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  
+    <main class="container my-4">
+      <div class="row">
+        
+        <article id="termek" class="col-12">
+          
+        </article>
+        
+        <aside id="kosar" class="col-lg-3 mt-4 mt-lg-0">
+          <div class="card">
+            <div class="card-header">
+              Kosár
+            </div>
+            <div class="card-body">
+              
+              <p class="card-text">A kosár tartalma itt jelenik meg.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+   
+    <footer class="bg-dark text-white py-3">
+      <div class="container text-center">
+        <small>&copy; 2025 SzipiSzupiGameshop. Minden jog fenntartva. Szente Bence, Matwi Ziad, Marek Bendegúz</small>
+      </div>
+    </footer>
+
+   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
-    <header>
-        <h1>OLCSÓ GAMING WEBSHOP F*** YEAH!!!!!!!!!!!</h1>
-      <nav>
-        <ul>
-          <li id="termek"></li>
-          <li id="kosar"></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article class="osztaly">
-
-      </article>
-      <aside class="termekszam">
-
-      </aside>
-    </main>
-    <footer>
-
-    </footer>
   </body>
 </html>
