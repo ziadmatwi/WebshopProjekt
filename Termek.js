@@ -4,6 +4,7 @@ export default class Termek{
     constructor(termekObj,szElem){
         this.#termekObj = termekObj;
         this.szElem = szElem;
+        console.log(szElem);
         this.megjelenit();
         this.gombElem = document.querySelector(".termek:last-child");
 
@@ -20,6 +21,7 @@ export default class Termek{
                         <button class="btn btn-primary">Add to Cart</button>
                     </div>
                     </div>`
+        this.szElem.insertAdjacentHTML("beforeend",html);
     }
 
     kosarbarak(){
