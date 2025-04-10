@@ -1,5 +1,5 @@
-import Termek from "./termekLista.js";
-import termekLista from "./termekLista.js"
+import Termek from "./Termek.js";
+import {TERMEKLISTA} from "./termekLista.js";
 
 export default class Webshop{
     #lista;
@@ -9,7 +9,7 @@ export default class Webshop{
 
     constructor(szElem){
         this.szElem = szElem;
-        this.#lista = termekLista;
+        this.#lista = TERMEKLISTA;
         this.#kosarLista = [];
         this.#termekGomb = document.querySelector("#termek");
         this.#kosarGomb = document.querySelector("#kosar");
@@ -19,8 +19,8 @@ export default class Webshop{
     }
 
     gombokMegjelenit(){
-        let html1 = `<p> <button type="button" id="termekGomb">Termék</button> </p>`
-        let html2 = `<p> <button type="button" id="kosarGomb">Kosár</button> </p>`
+        let html1 = `<a class="nav-link" href="#index"><button type="button" id="termekGomb">Termék</button></a>`
+        let html2 = `<a class="nav-link" href="#index"><button type="button" id="kosarGomb">Kosár</button></a>`
         this.#termekGomb.insertAdjacentHTML("beforeend",html1);
         this.#kosarGomb.insertAdjacentHTML("beforeend",html2);
     }
@@ -58,6 +58,14 @@ export default class Webshop{
         }
     }
 
+
+    kosarEvent(){
+        window.addEventListener("kosar", (event)=>{
+            console.log(event.detail);
+            this.#kosarLista.push(event.detail)
+            this.megjelenitListaElemek();
+        })
+    }
 
 
 
