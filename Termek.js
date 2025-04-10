@@ -6,7 +6,9 @@ export default class Termek{
         this.szElem = szElem;
         console.log(szElem);
         this.megjelenit();
-        this.gombElem = document.querySelector(".termek:last-child");
+        this.gombElem = document.querySelector(".card:last-child .kosarGomb");
+        console.log(this.gombElem);
+        this.kosarbarak();
 
 
     }
@@ -18,7 +20,7 @@ export default class Termek{
                         <h5 class="card-title">${this.#termekObj.nev}</h5>
                         <p class="card-text">Ár: ${this.#termekObj.ar}</p>
                         <p class="card-text">Platform: ${this.#termekObj.platform}</p>
-                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-primary kosarGomb">Add to Cart</button>
                     </div>
                     </div>`
         this.szElem.insertAdjacentHTML("beforeend",html);
@@ -26,7 +28,7 @@ export default class Termek{
 
     kosarbarak(){
         this.gombElem.addEventListener("click", ()=>{
-            console.log(this.gombElem.value);
+            console.log("kosárgomb megnyomva!")
             const e = new CustomEvent("kosar", {detail: this.#termekObj})
             window.dispatchEvent(e);
         })

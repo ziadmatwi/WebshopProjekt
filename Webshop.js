@@ -1,5 +1,7 @@
 import Termek from "./Termek.js";
+import KosarTermek from "./KosarTermek.js";
 import {TERMEKLISTA} from "./termekLista.js";
+
 
 export default class Webshop{
     #lista;
@@ -18,6 +20,7 @@ export default class Webshop{
         this.gombokMegjelenit();
         this.termekMegjelenit();
         this.gombEsemenyek();
+        this.kosarEvent();
     }
 
     gombokMegjelenit(){
@@ -35,7 +38,7 @@ export default class Webshop{
         })
 
         document.querySelector("#kosarGomb").addEventListener("click", ()=>{
-            
+            console.log(this.#kosarLista[0])
             this.kosarMegjelenit();
 
         })
@@ -55,8 +58,8 @@ export default class Webshop{
 
     kosarMegjelenit(){
         this.szElem.innerHTML = "";
-        for (let index = 0; index < this.#lista.length; index++) {
-            new KosarTermek(this.#kosarLista[i]);
+        for (let index = 0; index < this.#kosarLista.length; index++) {
+            new KosarTermek(this.#kosarLista[i], index);
             
         }
     }
@@ -64,9 +67,10 @@ export default class Webshop{
 
     kosarEvent(){
         window.addEventListener("kosar", (event)=>{
+            console.log("kosáradatok megkapva!")
             console.log(event.detail);
             this.#kosarLista.push(event.detail)
-            this.megjelenitListaElemek();
+            
         })
     }
 
