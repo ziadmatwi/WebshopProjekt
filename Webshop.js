@@ -6,13 +6,15 @@ export default class Webshop{
     #kosarLista;
     #termekGomb;
     #kosarGomb;
+    szElem;
 
     constructor(szElem){
         this.szElem = szElem;
+        console.log(szElem)
         this.#lista = TERMEKLISTA;
         this.#kosarLista = [];
-        this.#termekGomb = document.querySelector("#termek");
-        this.#kosarGomb = document.querySelector("#kosar");
+        this.#termekGomb = document.querySelector("#termekSzulo");
+        this.#kosarGomb = document.querySelector("#kosarSzulo");
         this.gombokMegjelenit();
         this.termekMegjelenit();
         this.gombEsemenyek();
@@ -26,6 +28,7 @@ export default class Webshop{
     }
 
     gombEsemenyek(){
+        console.log(document.querySelector("#termekGomb"))
         document.querySelector("#termekGomb").addEventListener("click", ()=>{
             this.termekMegjelenit();
 
@@ -42,7 +45,7 @@ export default class Webshop{
     termekMegjelenit(){
         this.szElem.innerHTML = "";
         for (let index = 0; index < this.#lista.length; index++) {
-            new Termek(this.#lista[i]);
+            new Termek(this.#lista[index],document.querySelector("#termek"));
             
         }
 
